@@ -1,0 +1,43 @@
+name: self-test
+
+# Runs the self-test under a real Dart SDK, on every push.
+# The point is not that the cases passed once: it is that they pass today.
+#
+# NO SECRETS. This workflow reads nothing but the repository itself and needs
+# no credentials — the permissions below say so explicitly rather than relying
+# on the default.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Same action and same channel used to build the app these two classes
+      # came out of, so the SDK here is the SDK they actually run under.
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Version in use
+        run: dart --version
+
+      # Every file must parse. A test file that does not compile is a test
+      # that never ran, and it looks identical to one that passed.
+      - name: Analyze
+        run: dart analyze --fatal-infos lib selftest.dart
+
+      # 22 cases, both directions. The run fails if any of them disagrees.
+      - name: Self-test
+        run: dart run selftest.dart

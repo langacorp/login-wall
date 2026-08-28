@@ -1,0 +1,9 @@
+# Minimal package manifest. `dart analyze` needs one, and without it the
+# workflow would fail for a reason that has nothing to do with the code.
+name: login_wall
+description: Two guards for an app that opens its own pages in a WebView.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"

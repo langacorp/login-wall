@@ -1,5 +1,7 @@
 # login-wall
 
+[![self-test](https://github.com/langacorp/login-wall/actions/workflows/selftest.yml/badge.svg)](https://github.com/langacorp/login-wall/actions/workflows/selftest.yml)
+
 Two small guards for an app that opens its own web pages in a WebView.
 
 **`DomainGuard`** — is this URL ours, really?
@@ -59,10 +61,9 @@ through the web — the exact double identity this exists to prevent.
 dart run selftest.dart
 ```
 
-**Not yet run under `dart`.** The 22 cases below were exercised by hand,
-line by line, against a faithful transcription of the same logic — which
-proves the cases agree with each other, not that this code compiles. Run it
-before trusting it.
+The badge above is that same run, under a real Dart SDK, on every push. It is
+the difference between *the cases passed* and *the cases pass today*: you can
+check instead of taking our word for it.
 
 Both directions, and the silent one is the one that costs:
 
