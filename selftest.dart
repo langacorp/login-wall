@@ -53,7 +53,7 @@ void main() {
   check('trailing slash', d.urlLooksLikeLogin('https://x.test/login/'), true);
   check('with query',
       d.urlLooksLikeLogin('https://x.test/login/?embed=1'), true);
-  check('probe found a form', d.readProbe('true'), true);
+  check('probe found a form', LoginWallDetector.readProbe('true'), true);
   check('both signals via isLoginWall',
       d.isLoginWall(url: 'https://x.test/login/', probeResult: 'true'), true);
   check('probe alone is enough',
@@ -67,9 +67,9 @@ void main() {
   check('product page named login',
       d.urlLooksLikeLogin('https://x.test/products/login-easy'), false);
   check('home', d.urlLooksLikeLogin('https://x.test/'), false);
-  check('probe found nothing', d.readProbe('false'), false);
-  check('probe returned junk', d.readProbe('undefined'), false);
-  check('probe returned null', d.readProbe(null), false);
+  check('probe found nothing', LoginWallDetector.readProbe('false'), false);
+  check('probe returned junk', LoginWallDetector.readProbe('undefined'), false);
+  check('probe returned null', LoginWallDetector.readProbe(null), false);
   check('valid session, no signal',
       d.isLoginWall(url: 'https://x.test/account/orders', probeResult: 'false'),
       false);
