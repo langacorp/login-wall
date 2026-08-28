@@ -59,6 +59,11 @@ through the web — the exact double identity this exists to prevent.
 dart run selftest.dart
 ```
 
+**Not yet run under `dart`.** The 22 cases below were exercised by hand,
+line by line, against a faithful transcription of the same logic — which
+proves the cases agree with each other, not that this code compiles. Run it
+before trusting it.
+
 Both directions, and the silent one is the one that costs:
 
 | must fire | must stay silent |
