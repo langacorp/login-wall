@@ -122,7 +122,7 @@ if (detector.isLoginWall(url: url, probeResult: probe)) {
 
 ## Where this comes from
 
-LANGA runs 16 digital services across 5 networks on its own infrastructure.
+LANGA runs an ecosystem of digital services on its own infrastructure.
 This tool came out of shipping the mobile apps that sit in front of them:
 
 - [LANGA](https://langa.tv) — the ecosystem
