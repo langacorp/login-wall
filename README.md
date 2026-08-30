@@ -122,9 +122,15 @@ if (detector.isLoginWall(url: url, probeResult: probe)) {
 
 ## Where this comes from
 
-LANGA runs 16 digital services across 5 networks on its own infrastructure. This
-tool came out of a defect we hit while running them. See
-[How we work](https://about.langa.tv/how-we-work/).
+LANGA runs 16 digital services across 5 networks on its own infrastructure.
+This tool came out of shipping the mobile apps that sit in front of them:
+
+- [LANGA](https://langa.tv) — the ecosystem
+- [easy LANGA](https://easy.langa.tv) — client management, reports, support
+- [Drive In](https://drivein.langa.tv) — marketing packages for local business
+- [eFruit](https://efruit.langa.tv) — food marketplace for local producers
+
+See [How we work](https://about.langa.tv/how-we-work/).
 
 ---
 
