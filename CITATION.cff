@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+type: software
+title: "login-wall"
+abstract: "Two guards for apps that open their own pages in a WebView: is this URL really ours, and has the page just shown a sign-in wall. No dependencies, nothing hardcoded."
+authors:
+  - name: "LANGA Corp. Srl"
+    city: Milan
+    country: IT
+    website: "https://langa.tv"
+repository-code: "https://github.com/langacorp/login-wall"
+url: "https://github.com/langacorp/login-wall"
+license: MIT
+version: "1.0.0"
+date-released: "2026-08-28"
