@@ -1,6 +1,7 @@
 # login-wall
 
 [![self-test](https://github.com/langacorp/login-wall/actions/workflows/selftest.yml/badge.svg)](https://github.com/langacorp/login-wall/actions/workflows/selftest.yml)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22298870-blue)](https://doi.org/10.5281/zenodo.22298870)
 
 Two small guards for an app that opens its own web pages in a WebView.
 
